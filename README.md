@@ -9,8 +9,10 @@ npm install git+https://github.com/nikeee/node-ntag424-sun.git
 
 ### Basic Template
 ```js
+import * as sun from "ntag424-sun";
+
 const { buffer, offsets } = sun.createNdefMessage(
-    "https://xd.com/x?uid={uid}&counter={counter}&cmac={cmac}",
+    "https://example.com/x?uid={uid}&counter={counter}&cmac={cmac}",
 );
 ```
 
