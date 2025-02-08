@@ -1,0 +1,36 @@
+{
+    "name": "ntag424-sun",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Create URL-template-based SUN messages NTAG 424 DNA.",
+    "author": "Niklas Mollenhauer",
+    "license": "AGPL-3.0-only",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+        "test": "node --test",
+        "ci": "biome ci ./src",
+        "lint": "biome lint ./src",
+        "format": "biome format --write ./src && biome lint --write ./src && biome check --write ./src"
+    },
+    "keywords": [
+        "ntag424",
+        "encryption",
+        "nxp",
+        "AN12196",
+        "NT4H2421Gx",
+        "sun"
+    ],
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "expect": "^29.7.0",
+        "ndef": "^0.2.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nikeee/node-ntag424-sun"
+    },
+    "dependencies": {
+        "url-template": "^3.1.1"
+    }
+}
