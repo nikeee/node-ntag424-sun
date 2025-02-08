@@ -1,11 +1,11 @@
 export type SunNdefMessageData = {
-  buffer: Buffer;
-  offsets: {
-    picc: number | null;
-    uid: number | null;
-    counter: number | null;
-    cmac: number | null;
-  };
+	buffer: Buffer;
+	offsets: {
+		picc: number | null;
+		uid: number | null;
+		counter: number | null;
+		cmac: number | null;
+	};
 };
 
 /**
