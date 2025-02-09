@@ -24,14 +24,14 @@
     ],
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
-        "expect": "^29.7.0",
-        "ndef": "^0.2.0"
+        "expect": "^29.7.0"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/nikeee/node-ntag424-sun"
     },
     "dependencies": {
+        "ndef": "^0.2.0",
         "url-template": "^3.1.1"
     }
 }
