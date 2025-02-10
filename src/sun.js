@@ -11,7 +11,7 @@ const placeholder = {
 };
 
 /**
- * @param {string} template
+ * @param {string} template [RFC 6570](https://datatracker.ietf.org/doc/html/rfc6570) URI template.
  * @param {Record<string, string>} extraParameters Other variables to exand into the URI template.
  */
 function createUrl(template, extraParameters) {
