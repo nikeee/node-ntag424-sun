@@ -15,6 +15,16 @@ const { buffer, offsets } = sun.createNdefMessage(
     "https://example.com/x?uid={uid}&counter={counter}&cmac={cmac}",
 );
 ```
+### Extra Varialbes
+Instead of using `new URL().searchParams`, you can use:
+```js
+import * as sun from "ntag424-sun";
+
+const { buffer, offsets } = sun.createNdefMessage(
+    "https://example.com/x?foo={foo}&uid={uid}&counter={counter}&cmac={cmac}",
+    { foo: "bar" },
+);
+```
 
 ### Available Placeholders
 - `{picc}`

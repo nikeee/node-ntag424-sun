@@ -12,8 +12,9 @@ const placeholder = {
 
 /**
  * @param {string} template
+ * @param {Record<string, string>} extraParameters Other variables to exand into the URI template.
  */
-function createUrl(template) {
+function createUrl(template, extraParameters) {
 	const invalidSubstrings = Object.values(placeholder);
 	for (const substring of invalidSubstrings) {
 		if (template.includes(substring)) {
@@ -22,7 +23,11 @@ function createUrl(template) {
 			);
 		}
 	}
-	return parseTemplate(template).expand(placeholder);
+
+	return parseTemplate(template).expand({
+		...extraParameters,
+		...placeholder,
+	});
 }
 
 /**
@@ -38,11 +43,12 @@ function createUrl(template) {
  */
 
 /**
- * @param {string} template [RFC 6570](https://datatracker.ietf.org/doc/html/rfc6570) URI template
+ * @param {string} template [RFC 6570](https://datatracker.ietf.org/doc/html/rfc6570) URI template.
+ * @param {Record<string, string>} [extraParameters] Other variables to exand into the URI template.
  * @return {SunNdefMessageData}
  */
-export function createNdefMessage(template) {
-	const url = createUrl(template);
+export function createNdefMessage(template, extraParameters = {}) {
+	const url = createUrl(template, extraParameters);
 	const bytes = Buffer.from(ndef.encodeMessage([ndef.uriRecord(url)]));
 
 	const buffer = Buffer.alloc(bytes.length + 2);
