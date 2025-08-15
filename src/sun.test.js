@@ -2,7 +2,7 @@
 import { describe, test } from "node:test";
 import { expect } from "expect";
 
-// @ts-ignore
+// @ts-expect-error
 import ndef from "ndef";
 
 import * as sun from "./sun.js";
@@ -52,11 +52,11 @@ describe("SUN", async () => {
 		expect(offsets.cmac).toBeDefined();
 		expect(offsets.cmac).not.toBeNull();
 
-		// @ts-ignore
+		// @ts-expect-error
 		const uidBuffer = buffer.subarray(offsets.uid, offsets.uid + 14);
 		expect(uidBuffer.toString("ascii")).toBe("*".repeat(14));
 
-		// @ts-ignore
+		// @ts-expect-error
 		const cmacBuffer = buffer.subarray(offsets.cmac, offsets.cmac + 16);
 		expect(cmacBuffer.toString("ascii")).toBe("*".repeat(16));
 	});

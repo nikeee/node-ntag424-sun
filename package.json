@@ -23,7 +23,7 @@
         "sun"
     ],
     "devDependencies": {
-        "@biomejs/biome": "^2.1.4",
+        "@biomejs/biome": "^2.2.0",
         "expect": "^30.0.5"
     },
     "repository": {
