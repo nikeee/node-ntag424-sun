@@ -1,6 +1,6 @@
 {
     "name": "ntag424-sun",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "private": true,
     "description": "Create URL-template-based SUN messages NTAG 424 DNA.",
     "author": "Niklas Mollenhauer",
