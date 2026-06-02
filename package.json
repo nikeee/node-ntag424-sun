@@ -24,7 +24,7 @@
     ],
     "devDependencies": {
         "@biomejs/biome": "^2.4.16",
-        "expect": "^30.3.0"
+        "expect": "^30.4.1"
     },
     "repository": {
         "type": "git",
